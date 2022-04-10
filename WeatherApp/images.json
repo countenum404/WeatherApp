@@ -1,0 +1,8 @@
+{
+  "sunny": "Resources/sun.png",
+  "sunny-cloudly": "Resources/sun-clouds.png",
+  "lightning": "Resources/lightning.png",
+  "sunny-cloudly-rain": "Resources/sun-clouds-rain.png",
+  "clouds": "Resources/clouds.png",
+  "clouds-snow": "Resources/clouds-snow.png"
+}
