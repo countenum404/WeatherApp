@@ -37,16 +37,22 @@
             this.CurrentLocation = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Temperature = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.Feels = new System.Windows.Forms.Label();
+            this.Statement = new System.Windows.Forms.Label();
+            this.Description = new System.Windows.Forms.Label();
+            this.Max = new System.Windows.Forms.Label();
+            this.Min = new System.Windows.Forms.Label();
+            this.wspeed = new System.Windows.Forms.Label();
+            this.pressure = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.unitsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.standardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metricToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imperialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Close.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // WeatherIcon
@@ -60,14 +66,15 @@
             // Close
             // 
             this.Close.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.unitsToolStripMenuItem,
             this.closeToolStripMenuItem});
             this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(104, 26);
+            this.Close.Size = new System.Drawing.Size(181, 70);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItemClick);
             // 
@@ -108,7 +115,7 @@
             this.Temperature.Cursor = System.Windows.Forms.Cursors.Default;
             this.Temperature.DetectUrls = false;
             this.Temperature.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Temperature.Location = new System.Drawing.Point(12, 62);
+            this.Temperature.Location = new System.Drawing.Point(12, 69);
             this.Temperature.MaxLength = 4;
             this.Temperature.Name = "Temperature";
             this.Temperature.ReadOnly = true;
@@ -118,68 +125,120 @@
             this.Temperature.TabStop = false;
             this.Temperature.Text = "Temp";
             // 
-            // label1
+            // Feels
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 386);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.Feels.AutoSize = true;
+            this.Feels.Font = new System.Drawing.Font("Nirmala UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Feels.Location = new System.Drawing.Point(12, 106);
+            this.Feels.Name = "Feels";
+            this.Feels.Size = new System.Drawing.Size(59, 17);
+            this.Feels.TabIndex = 4;
+            this.Feels.Text = "Feels like";
             // 
-            // label2
+            // Statement
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 403);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
+            this.Statement.AutoSize = true;
+            this.Statement.Font = new System.Drawing.Font("Nirmala UI Semilight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Statement.Location = new System.Drawing.Point(3, 0);
+            this.Statement.Name = "Statement";
+            this.Statement.Size = new System.Drawing.Size(137, 37);
+            this.Statement.TabIndex = 5;
+            this.Statement.Text = "Statement";
             // 
-            // label3
+            // Description
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 420);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "label3";
+            this.Description.AutoSize = true;
+            this.Description.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Description.Location = new System.Drawing.Point(6, 34);
+            this.Description.Name = "Description";
+            this.Description.Size = new System.Drawing.Size(52, 21);
+            this.Description.TabIndex = 6;
+            this.Description.Text = "label3";
             // 
-            // label4
+            // Max
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(220, 386);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "label4";
+            this.Max.AutoSize = true;
+            this.Max.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Max.Location = new System.Drawing.Point(6, 53);
+            this.Max.Name = "Max";
+            this.Max.Size = new System.Drawing.Size(52, 21);
+            this.Max.TabIndex = 7;
+            this.Max.Text = "label4";
             // 
-            // label5
+            // Min
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(220, 403);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "label5";
+            this.Min.AutoSize = true;
+            this.Min.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Min.Location = new System.Drawing.Point(6, 73);
+            this.Min.Name = "Min";
+            this.Min.Size = new System.Drawing.Size(52, 21);
+            this.Min.TabIndex = 8;
+            this.Min.Text = "label5";
             // 
-            // label6
+            // wspeed
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(220, 420);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "label6";
+            this.wspeed.AutoSize = true;
+            this.wspeed.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wspeed.Location = new System.Drawing.Point(6, 90);
+            this.wspeed.Name = "wspeed";
+            this.wspeed.Size = new System.Drawing.Size(52, 21);
+            this.wspeed.TabIndex = 9;
+            this.wspeed.Text = "label6";
             // 
-            // label7
+            // pressure
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(220, 437);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "label7";
+            this.pressure.AutoSize = true;
+            this.pressure.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pressure.Location = new System.Drawing.Point(6, 107);
+            this.pressure.Name = "pressure";
+            this.pressure.Size = new System.Drawing.Size(70, 21);
+            this.pressure.TabIndex = 10;
+            this.pressure.Text = "pressure";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel2.Controls.Add(this.Statement);
+            this.panel2.Controls.Add(this.Max);
+            this.panel2.Controls.Add(this.pressure);
+            this.panel2.Controls.Add(this.Description);
+            this.panel2.Controls.Add(this.wspeed);
+            this.panel2.Controls.Add(this.Min);
+            this.panel2.Location = new System.Drawing.Point(0, 354);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(342, 134);
+            this.panel2.TabIndex = 11;
+            // 
+            // unitsToolStripMenuItem
+            // 
+            this.unitsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.standardToolStripMenuItem,
+            this.metricToolStripMenuItem,
+            this.imperialToolStripMenuItem});
+            this.unitsToolStripMenuItem.Name = "unitsToolStripMenuItem";
+            this.unitsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.unitsToolStripMenuItem.Text = "Units";
+            // 
+            // standardToolStripMenuItem
+            // 
+            this.standardToolStripMenuItem.Name = "standardToolStripMenuItem";
+            this.standardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.standardToolStripMenuItem.Text = "Standard";
+            this.standardToolStripMenuItem.Click += new System.EventHandler(this.standardToolStripMenuItem_Click);
+            // 
+            // metricToolStripMenuItem
+            // 
+            this.metricToolStripMenuItem.Name = "metricToolStripMenuItem";
+            this.metricToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.metricToolStripMenuItem.Text = "Metric";
+            this.metricToolStripMenuItem.Click += new System.EventHandler(this.metricToolStripMenuItem_Click);
+            // 
+            // imperialToolStripMenuItem
+            // 
+            this.imperialToolStripMenuItem.Name = "imperialToolStripMenuItem";
+            this.imperialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imperialToolStripMenuItem.Text = "Imperial";
+            this.imperialToolStripMenuItem.Click += new System.EventHandler(this.imperialToolStripMenuItem_Click);
             // 
             // WeatherWidget
             // 
@@ -187,13 +246,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(341, 485);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.Feels);
             this.Controls.Add(this.Temperature);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
@@ -207,6 +261,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,13 +277,18 @@
         private System.Windows.Forms.Label CurrentLocation;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RichTextBox Temperature;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Feels;
+        private System.Windows.Forms.Label Statement;
+        private System.Windows.Forms.Label Description;
+        private System.Windows.Forms.Label Max;
+        private System.Windows.Forms.Label Min;
+        private System.Windows.Forms.Label wspeed;
+        private System.Windows.Forms.Label pressure;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ToolStripMenuItem unitsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem standardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem metricToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem imperialToolStripMenuItem;
     }
 }
 
