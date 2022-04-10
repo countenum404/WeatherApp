@@ -38,17 +38,18 @@ namespace WeatherApp
         public Weather GetWeather()
         {
             GetWeatherJson();
-            Weather weather = new Weather()
-            {
-                Temperature = (int)this.WeatherJson["main"]["temp"],
-                FeelsLike = (int)this.WeatherJson["main"]["feels_like"],
-                Minimal = (int)this.WeatherJson["main"]["temp_min"],
-                Maximum = (int)this.WeatherJson["main"]["temp_max"],
-                Pressure = (int)this.WeatherJson["main"]["pressure"],
-                Humidity = (int)this.WeatherJson["main"]["humidity"],
-                Statement = (string)this.WeatherJson["weather"]["main"],
-                Description = (string)this.WeatherJson["weather"]["description"]
-            };
+            Weather weather = new Weather();
+
+            weather.Temperature = (int)this.WeatherJson["main"]["temp"];
+                weather.FeelsLike = (int)this.WeatherJson["main"]["feels_like"];
+                weather.Minimal = (int)this.WeatherJson["main"]["temp_min"];
+                weather.Maximum = (int)this.WeatherJson["main"]["temp_max"];
+                weather.Pressure = (int)this.WeatherJson["main"]["pressure"];
+                weather.Humidity = (int)this.WeatherJson["main"]["humidity"];
+                weather.WindSpeed = (double)this.WeatherJson["wind"]["speed"];
+                weather.Statement = this.WeatherJson["weather"][0]["main"].ToString();
+                weather.Description = this.WeatherJson["weather"][0]["description"].ToString();
+            
             
             return weather;
             

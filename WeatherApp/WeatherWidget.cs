@@ -18,7 +18,15 @@ namespace WeatherApp
             CurrentWeather currentWeather = new CurrentWeather();
             currentWeather.Units = Units.metric;
             CurrentLocation.Text = currentWeather.GetLocation().City;
-            Temperature.Text = currentWeather.GetWeather().Temperature.ToString();
+            Temperature.Text = currentWeather.GetWeather().Temperature.ToString() + "°";
+            label1.Text = currentWeather.GetWeather().FeelsLike.ToString();
+            label2.Text = currentWeather.GetWeather().Statement;
+            label3.Text = currentWeather.GetWeather().Description;
+            label4.Text = currentWeather.GetWeather().Maximum.ToString();
+            label5.Text = currentWeather.GetWeather().Minimal.ToString();
+            label6.Text = currentWeather.GetWeather().WindSpeed.ToString();
+            label7.Text = currentWeather.GetWeather().Pressure.ToString();
+            
         }
 
         private void WidgetLoad(object sender, EventArgs e)
